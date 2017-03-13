@@ -9,3 +9,51 @@ body {
   height: 700px;
   width: 100%;
 }
+
+.position-a, .position-b, .position-c, .position-d {
+  background-color: #EEEEEE;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: @border-color;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: 50%
+}
+
+.position-a:hover, .position-b:hover, .position-c:hover, .position-d:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 1px #888888;
+}
+
+.position-a-input, .position-b-input, .position-c-input, .position-d-input {
+  margin-top: 25px;
+  padding: 0;
+}
+
+.span-coin-value {
+  font-size: 50px;
+  line-height: 100px;
+}
+
+.span-counter-value-container {
+  background-color: #262626;
+  border: 1px solid;
+  border-color: @border-color;;
+  border-radius: 50%;
+  color: white;
+  text-shadow: .5px .5px #BDC3C7;
+  height: 25px;
+  position: absolute;
+  width: 25px;
+  left: 66%;
+}
+
+.xs-square {
+  min-height: 150px;
+  min-width: 150px;
+}
+
+.text-align-right {
+  text-align: right;
+}
