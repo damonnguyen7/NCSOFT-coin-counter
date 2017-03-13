@@ -15,15 +15,15 @@ gulp.task('deploy', function (){
   bundleApp(true);
 });
 
+gulp.task('compile_less', function() {
+  return gulp.src('./less_src/styles.less')
+  .pipe(less())
+  .pipe(gulp.dest('./public/stylesheets'));
+});
+
 gulp.task('watch', function () {
   gulp.watch(['./react/*.js'], ['scripts']);
   gulp.watch(['./less_src/*.less'], ['compile_less']);
-});
-
-gulp.task('compile_less', function() {
-  return gulp.src('./less_src/styles.less')
-      .pipe(less())
-      .pipe(gulp.dest('./public/stylesheets'));
 });
 
 // When running 'gulp' on the terminal this task will fire.
