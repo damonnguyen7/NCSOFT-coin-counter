@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import CoinContainer  from './CoinComponent.js';
+import CoinContainer  from './coinComponent.js';
+import FormComponent from './formComponent.js';
 
 class CoinCounterContainer extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class CoinCounterContainer extends Component {
 
   componentWillMount() {
     this.setState({
-      coins: this.props.coins
+      store: this.props.store
     });
   }
 
@@ -23,6 +24,9 @@ class CoinCounterContainer extends Component {
           <div className="col-xs-12">
             <CoinContainer />
           </div>
+          <div className="col-xs-12">
+            <FormComponent />
+          </div>
         </div>
       </div>
     );
@@ -31,7 +35,7 @@ class CoinCounterContainer extends Component {
 
 const mapStateToProps = function(state) {
   return {
-    coins: state
+    store: state
   }
 };
 
