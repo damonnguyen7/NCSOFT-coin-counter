@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { defineCoin, defineCounter } from './redux/actions/index.js';
+import { defineCoin } from './redux/actions/index.js';
 import { connect } from 'react-redux';
 
 class CoinContainer extends Component {
