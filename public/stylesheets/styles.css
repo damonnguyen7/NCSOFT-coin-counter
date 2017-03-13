@@ -6716,3 +6716,13 @@ button.close {
     display: none !important;
   }
 }
+body {
+  background-color: #E9EBEE;
+}
+.main-container {
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  height: 700px;
+  width: 100%;
+}
