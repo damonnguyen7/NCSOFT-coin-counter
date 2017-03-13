@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import CoinContainer  from './CoinComponent.js';
+
 class CoinCounterContainer extends Component {
   constructor() {
     super();
@@ -14,11 +16,13 @@ class CoinCounterContainer extends Component {
   }
 
   render() {
-    console.log('state from redux store: ', this.state.coins);
     return (
       <div className="container main-container">
         <div className="row">
           <h1 className="col-xs-12 text-center">Coin Counter</h1>
+          <div className="col-xs-12">
+            <CoinContainer />
+          </div>
         </div>
       </div>
     );
