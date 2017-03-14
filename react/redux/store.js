@@ -8,10 +8,4 @@ var reducers = combineReducers({
   coinD: coinDReducer
 });
 
-//define store
 export const store = createStore(reducers);
-
-
-store.subscribe(() => {
-  console.log('store state: ', store.getState());
-});
