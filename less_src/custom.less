@@ -3,11 +3,16 @@ body {
 }
 
 .main-container {
+  position: fixed;
   background-color: #FFFFFF;
   border: @border;
   border-color: @border-color;
-  height: 700px;
+  height: 736px;
   width: 100%;
+}
+
+.main-title {
+  margin-bottom: 50px;
 }
 
 .position-a, .position-b, .position-c, .position-d {
@@ -18,7 +23,7 @@ body {
   height: 100px;
   width: 100px;
   position: absolute;
-  right: 50%
+  right: 45%
 }
 
 .position-a:hover, .position-b:hover, .position-c:hover, .position-d:hover {
@@ -31,12 +36,13 @@ body {
   padding: 0;
 }
 
-.span-coin-value {
+.div-coin-value {
   font-size: 50px;
+  color: #6C7A89;
   line-height: 100px;
 }
 
-.span-counter-value-container {
+.div-counter-value-container {
   background-color: #262626;
   border: 1px solid;
   border-color: @border-color;;
@@ -58,7 +64,7 @@ body {
   text-align: right;
 }
 
-.main-form {
+.main-form-submit, .main-form-input {
   margin: 10px 0px;
 }
 
