@@ -21,9 +21,14 @@ class FormComponent extends Component {
   }
 
   updateInputValue(e) {
-    this.setState({
-      inputValue: e.target.value
-    });
+    var isNumber = Number(e.target.value);
+    if (!isNaN(isNumber)) {
+      this.setState({
+        inputValue: e.target.value
+      });
+    } else {
+      alert('Input value must be a number!');
+    }
   }
 
   displayMinimumCoins(e) {
@@ -42,7 +47,6 @@ class FormComponent extends Component {
       var results = {};
       for (var i = 0; i < coins.length; i++) {
         results[coins[i]] = 0;
-
       }
       coins.forEach(function(coin) {
         while (totalValue - coin >= 0) {
@@ -68,8 +72,8 @@ class FormComponent extends Component {
     return (
       <div className="col-xs-10 col-xs-offset-1">
         <form onSubmit={this.displayMinimumCoins}>
-          <input type="text" className="form-control col-xs-12 text-align-right value-input main-form" value={this.state.inputValue} onChange={this.updateInputValue}></input>
-          <input type="submit" value="calculate" className="calc-btn btn btn-default col-xs-12 main-form"></input>
+          <input type="text" className="form-control col-xs-12 text-align-right value-input main-form-input" value={this.state.inputValue} onChange={this.updateInputValue}></input>
+          <input type="submit" value="calculate" className="calc-btn btn btn-default col-xs-12 main-form-submit"></input>
         </form>
       </div>
     );
