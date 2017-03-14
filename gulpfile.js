@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var gulp_utility = require('gulp-util');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var babelify = require('babelify');
-var less = require('gulp-less');
-var mocha = require('gulp-mocha');
+const gulp = require('gulp');
+const gulp_utility = require('gulp-util');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const babelify = require('babelify');
+const less = require('gulp-less');
+const mocha = require('gulp-mocha');
 
 // Gulp tasks:
 gulp.task('scripts', function () {
@@ -17,12 +17,13 @@ gulp.task('deploy', function (){
 
 gulp.task('compile_less', function() {
   return gulp.src('./less_src/styles.less')
-  .pipe(less())
-  .pipe(gulp.dest('./public/stylesheets'));
+        .pipe(less())
+        .pipe(gulp.dest('./public/stylesheets'));
 });
 
 gulp.task('watch', function () {
   gulp.watch(['./react/*.js'], ['scripts']);
+  gulp.watch(['./react/**/*.*'], ['scripts']);
   gulp.watch(['./less_src/*.less'], ['compile_less']);
 });
 
