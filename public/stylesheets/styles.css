@@ -6720,11 +6720,15 @@ body {
   background-color: #E9EBEE;
 }
 .main-container {
+  position: fixed;
   background-color: #FFFFFF;
   border: 1px solid;
   border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-  height: 700px;
+  height: 736px;
   width: 100%;
+}
+.main-title {
+  margin-bottom: 50px;
 }
 .position-a,
 .position-b,
@@ -6737,7 +6741,7 @@ body {
   height: 100px;
   width: 100px;
   position: absolute;
-  right: 50%;
+  right: 45%;
 }
 .position-a:hover,
 .position-b:hover,
@@ -6753,11 +6757,12 @@ body {
   margin-top: 25px;
   padding: 0;
 }
-.span-coin-value {
+.div-coin-value {
   font-size: 50px;
+  color: #6C7A89;
   line-height: 100px;
 }
-.span-counter-value-container {
+.div-counter-value-container {
   background-color: #262626;
   border: 1px solid;
   border-color: #e5e6e9 #dfe0e4 #d0d1d5;
@@ -6776,11 +6781,55 @@ body {
 .text-align-right {
   text-align: right;
 }
-.main-form {
+.main-form-submit,
+.main-form-input {
   margin: 10px 0px;
 }
 .calc-btn {
   text-transform: uppercase;
   background-color: black;
   color: white;
+}
+@media screen and (max-width: 767px) {
+  .position-a,
+  .position-b,
+  .position-c,
+  .position-d {
+    right: 35%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .position-a,
+  .position-b,
+  .position-c,
+  .position-d {
+    right: 32%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .position-a,
+  .position-b,
+  .position-c,
+  .position-d {
+    right: 26%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .position-a,
+  .position-b,
+  .position-c,
+  .position-d {
+    right: 23%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-container {
+    position: fixed;
+  }
+  .position-a,
+  .position-b,
+  .position-c,
+  .position-d {
+    right: 20%;
+  }
 }
