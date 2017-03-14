@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "mocha -R spec ./react/test/coinCounter-spec.js"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -30,10 +31,10 @@
     "enzyme": "^2.7.1",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.0",
-    "gulp-mocha": "^4.1.0",
     "gulp-util": "^3.0.8",
-    "jsdom": "^9.12.0",
+    "jest": "^19.0.2",
     "react-addons-test-utils": "^15.4.2",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "zombie": "^5.0.5"
   }
 }
